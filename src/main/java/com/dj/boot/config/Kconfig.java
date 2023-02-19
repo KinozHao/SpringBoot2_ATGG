@@ -2,8 +2,10 @@ package com.dj.boot.config;
 
 import com.dj.boot.pojo.Collage;
 import com.dj.boot.pojo.User;
+import org.slf4j.impl.StaticLoggerBinder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 
 /**
  * @author kinoz
@@ -13,7 +15,10 @@ import org.springframework.context.annotation.Configuration;
  * proxyBeanMethods 代理Bean的方法,默认true
  * Full(proxyBeanMethods=true)单实例
  * Lite(proxyBeanMethods=false)多实例
+ *
+ * 通过Import注解也可以向容器中添加组件,默认组件的名字就是全类名
  */
+@Import({User.class, StaticLoggerBinder.class})
 @Configuration(proxyBeanMethods = true)
 public class Kconfig {
 

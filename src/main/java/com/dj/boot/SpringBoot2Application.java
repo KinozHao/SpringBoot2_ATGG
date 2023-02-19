@@ -3,6 +3,7 @@ package com.dj.boot;
 import com.dj.boot.config.Kconfig;
 import com.dj.boot.pojo.Collage;
 import com.dj.boot.pojo.User;
+import org.slf4j.impl.StaticLoggerBinder;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -42,6 +43,16 @@ public class SpringBoot2Application {
         User user3 = run.getBean("taobaowang.tbUser", User.class);
         Collage collage = run.getBean("taobaowang.tbCollage", Collage.class);
         System.out.println(user3.getCollage() == collage ? "核验正确" : "数据错误");
+
+        //验证Import注解添加的组件
+        System.out.println("--------------------");
+        String[] UserType = run.getBeanNamesForType(User.class);
+        for (String s : UserType) {
+            System.out.println(s);
+        }
+        for (String logger : run.getBeanNamesForType(StaticLoggerBinder.class)) {
+            System.out.println(logger);
+        }
 
     }
 
