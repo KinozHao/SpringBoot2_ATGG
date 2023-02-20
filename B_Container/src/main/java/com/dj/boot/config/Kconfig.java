@@ -3,7 +3,6 @@ package com.dj.boot.config;
 import com.dj.boot.pojo.Car;
 import com.dj.boot.pojo.Collage;
 import com.dj.boot.pojo.User;
-import com.dj.boot.pojo.ymltest.Person;
 import org.slf4j.impl.StaticLoggerBinder;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
