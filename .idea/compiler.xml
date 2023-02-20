@@ -9,6 +9,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="SpringBoot2" />
         <module name="HelloBoot" />
+        <module name="C_Yaml" />
+        <module name="A_HelloWord" />
+        <module name="B_Container" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -17,6 +20,9 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="A_HelloWord" options="-parameters" />
+      <module name="B_Container" options="-parameters" />
+      <module name="C_Yaml" options="-parameters" />
       <module name="HelloBoot" options="-parameters" />
       <module name="SpringBoot2" options="-parameters" />
     </option>
