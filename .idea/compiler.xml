@@ -10,6 +10,7 @@
         <module name="SpringBoot2" />
         <module name="HelloBoot" />
         <module name="C_Yaml" />
+        <module name="D_WebSimpleFuc" />
         <module name="A_HelloWord" />
         <module name="B_Container" />
       </profile>
@@ -23,6 +24,7 @@
       <module name="A_HelloWord" options="-parameters" />
       <module name="B_Container" options="-parameters" />
       <module name="C_Yaml" options="-parameters" />
+      <module name="D_WebSimpleFuc" options="-parameters" />
       <module name="HelloBoot" options="-parameters" />
       <module name="SpringBoot2" options="-parameters" />
     </option>

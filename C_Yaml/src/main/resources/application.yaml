@@ -1,9 +1,10 @@
+#Tomcat服务器相关
 server:
   port: 8082
 
-
+#和Person实体类进行绑定
 person:
-  userName: zhangsan
+  user-name: 李翠华
   boss: true
   birth: 2002/1/3
   age: 23

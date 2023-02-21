@@ -1,0 +1,77 @@
+{
+  "groups": [
+    {
+      "name": "person",
+      "type": "com.boot.pojo.Person",
+      "sourceType": "com.boot.pojo.Person"
+    },
+    {
+      "name": "pet",
+      "type": "com.boot.pojo.Pet",
+      "sourceType": "com.boot.pojo.Pet"
+    }
+  ],
+  "properties": [
+    {
+      "name": "person.age",
+      "type": "java.lang.Integer",
+      "sourceType": "com.boot.pojo.Person"
+    },
+    {
+      "name": "person.all-pets",
+      "type": "java.util.Map<java.lang.String,java.util.List<com.boot.pojo.Pet>>",
+      "sourceType": "com.boot.pojo.Person"
+    },
+    {
+      "name": "person.animal",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "com.boot.pojo.Person"
+    },
+    {
+      "name": "person.birth",
+      "type": "java.util.Date",
+      "sourceType": "com.boot.pojo.Person"
+    },
+    {
+      "name": "person.boss",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.boot.pojo.Person"
+    },
+    {
+      "name": "person.interests",
+      "type": "java.lang.String[]",
+      "sourceType": "com.boot.pojo.Person"
+    },
+    {
+      "name": "person.pet",
+      "type": "com.boot.pojo.Pet",
+      "sourceType": "com.boot.pojo.Person"
+    },
+    {
+      "name": "person.salarys",
+      "type": "java.util.Set<java.lang.Double>",
+      "sourceType": "com.boot.pojo.Person"
+    },
+    {
+      "name": "person.score",
+      "type": "java.util.Map<java.lang.String,java.lang.Object>",
+      "sourceType": "com.boot.pojo.Person"
+    },
+    {
+      "name": "person.user-name",
+      "type": "java.lang.String",
+      "sourceType": "com.boot.pojo.Person"
+    },
+    {
+      "name": "pet.name",
+      "type": "java.lang.String",
+      "sourceType": "com.boot.pojo.Pet"
+    },
+    {
+      "name": "pet.weight",
+      "type": "java.lang.Double",
+      "sourceType": "com.boot.pojo.Pet"
+    }
+  ],
+  "hints": []
+}

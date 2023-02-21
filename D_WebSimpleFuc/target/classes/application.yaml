@@ -1,0 +1,11 @@
+spring:
+  #访问前缀和自定义欢迎页存在冲突，使用自定义欢迎页时候需把访问前缀注释一下
+  #mvc:
+    #修改了默认访问的路径,默认为/resources/**
+    #static-path-pattern: /res/**
+  web:
+    resources:
+      #前后端分离已过世
+      #修改静态资源的默认位置
+      #指定过后static下资源失效
+      static-locations: classpath:/data
