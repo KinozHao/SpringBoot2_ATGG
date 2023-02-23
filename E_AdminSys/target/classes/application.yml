@@ -3,6 +3,12 @@ spring:
     name: demo
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/springboot?serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/springboot?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false&CharacterEncoding=utf-8
     username: 'root'
     password: '123456'
+  servlet:
+    multipart:
+      #单个文件上传限制
+      max-file-size: 10MB
+      #总文件上传限制
+      max-request-size: 1GB

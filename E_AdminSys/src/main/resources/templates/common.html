@@ -3,7 +3,8 @@
 <head th:fragment="commonheader">
     <meta charset="UTF-8">
     <title>所有的公众资源抽取到此页面</title>
-
+  <!--把templates下html中相同的资源进行提取,通过thymeleaf的th:include th:replace th:insert进行引用
+  较少代码量-->
   <link th:href="@{/css/style.css}" rel="stylesheet">
   <link th:href="@{/css/style-responsive.css}" rel="stylesheet">
 
@@ -50,7 +51,7 @@
 
       <!--sidebar nav start-->
       <ul class="nav nav-pills nav-stacked custom-nav">
-        <li><a href="index.html"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
+        <li><a th:href="@{/index.html}"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
         <li class="menu-list"><a href=""><i class="fa fa-laptop"></i> <span>Layouts</span></a>
           <ul class="sub-menu-list">
             <li ><a href="blank_page.html"> Blank Page</a></li>
@@ -93,7 +94,7 @@
 
         <li class="menu-list"><a href=""><i class="fa fa-tasks"></i> <span>Forms</span></a>
           <ul class="sub-menu-list">
-            <li><a href="form_layouts.html"> Form Layouts</a></li>
+            <li><a th:href="@{/form_layouts}"> Form Layouts</a></li>
             <li><a href="form_advanced_components.html"> Advanced Components</a></li>
             <li><a href="form_wizard.html"> Form Wizards</a></li>
             <li><a href="form_validation.html"> Form Validation</a></li>
@@ -338,13 +339,13 @@
         <li>
           <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
             <img src="images/photos/user-avatar.png" alt="" />
-            John Doe
+            [[${session.loginUser.username}]]
             <span class="caret"></span>
           </a>
           <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
             <li><a href="#"><i class="fa fa-user"></i>  Profile</a></li>
             <li><a href="#"><i class="fa fa-cog"></i>  Settings</a></li>
-            <li><a href="#"><i class="fa fa-sign-out"></i> Log Out</a></li>
+            <li><a th:href="@{/}"><i class="fa fa-sign-out"></i> Log Out</a></li>
           </ul>
         </li>
 
