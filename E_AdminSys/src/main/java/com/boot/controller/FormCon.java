@@ -2,6 +2,7 @@ package com.boot.controller;
 
 import com.boot.mapper.UserMapper;
 import lombok.SneakyThrows;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,9 +17,10 @@ import java.io.File;
 /**
  * @author kinoz
  * @Date 2023/2/23 20:30
- * @apiNote 用户信息上传功能
+ * @apiNote 此类目的主要用来实现用户信息上传功能
  */
 @Controller
+@Slf4j
 public class FormCon {
     @Autowired
     UserMapper mapper;
@@ -36,7 +38,7 @@ public class FormCon {
                              @RequestPart("lifePhoto") MultipartFile[] lifePhotos, Model model){
         //存储用户数据到数据库
         if(mapper.insertUser(username, password) == 1){
-            System.out.println("插入数据成功");
+            log.info("user information insert success!!");
         }
 
         //存储头像图片信息到本地

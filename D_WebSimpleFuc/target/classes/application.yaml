@@ -9,6 +9,7 @@ spring:
       #修改静态资源的默认位置
       #指定过后static下资源失效
       static-locations: classpath:/data
-server:
-  servlet:
-    context-path: /world  #增加了访问路径的前置路径
+#测试Controller时需注释掉,不然频繁出现404
+#server:
+  #servlet:
+    #context-path: /world  #增加了访问路径的前置路径

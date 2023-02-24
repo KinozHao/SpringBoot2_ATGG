@@ -7,16 +7,17 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpSession;
 
 /**
  * @author kinoz
  * @Date 2023/2/22 10:54
- * @apiNote 登录认证
+ * @apiNote 此类目的主要用来实现登录认证
  */
 @Controller
-public class indexCon {
+public class IndexCon {
     @Autowired
     UserMapper userMapper;
 
@@ -26,7 +27,8 @@ public class indexCon {
     }
 
     @PostMapping("/login")
-    public String index(String username,String password,HttpSession session, Model model) {
+    public String index(@RequestParam String username,@RequestParam String password, HttpSession session, Model model) {
+
         //判断用户登录,防止通过路径直接进入后台(使用Mybatis-Plus)
         User loginUser = userMapper.userLogin(username, password);
         if (null != loginUser){

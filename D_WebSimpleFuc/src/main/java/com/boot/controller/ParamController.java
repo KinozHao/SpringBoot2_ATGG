@@ -37,6 +37,7 @@ public class ParamController {
         return list;
     }
 
+    //todo 提交报错404
     @PostMapping("/save")
     //从页面获取信息返回
     public Map<Object,Object> getInfo(@RequestBody String content){

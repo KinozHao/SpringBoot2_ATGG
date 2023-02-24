@@ -3,7 +3,8 @@
 <head th:fragment="commonheader">
     <meta charset="UTF-8">
     <title>所有的公众资源抽取到此页面</title>
-
+  <!--把templates下html中相同的资源进行提取,通过thymeleaf的th:include th:replace th:insert进行引用
+  较少代码量-->
   <link th:href="@{/css/style.css}" rel="stylesheet">
   <link th:href="@{/css/style-responsive.css}" rel="stylesheet">
 
@@ -128,7 +129,7 @@
         </li>
         <li class="menu-list"><a href=""><i class="fa fa-file-text"></i> <span>Extra Pages</span></a>
           <ul class="sub-menu-list">
-            <li><a href="profile.html"> Profile</a></li>
+            <li><a th:href="@{/profile}"> Profile</a></li>
             <li><a href="invoice.html"> Invoice</a></li>
             <li><a href="pricing_table.html"> Pricing Table</a></li>
             <li><a href="timeline.html"> Timeline</a></li>

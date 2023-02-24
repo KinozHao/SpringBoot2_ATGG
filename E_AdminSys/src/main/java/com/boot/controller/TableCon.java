@@ -12,7 +12,8 @@ import java.util.List;
 /**
  * @author kinoz
  * @Date 2023/2/22 14:20
- * @apiNote thymeleaf遍历数据通过model在前端进行展示
+ * @apiNote 此类目的主要用来实现后端数据在前端的展示
+ * thymeleaf遍历数据通过model在前端进行展示
  */
 @Controller
 public class TableCon {
@@ -22,6 +23,8 @@ public class TableCon {
 
     @GetMapping("/basic_table")
     public String basic_table(){
+        //手动制造异常,测试500错误页面
+        int i  = 10/0;
         return "/table/basic_table";
     }
 
@@ -29,8 +32,9 @@ public class TableCon {
     public String dynamic_table(Model model){
         //获取数据库中所有用户
         List<User> users = mapper.selectList(null);
-        //把获取的的对象存放在session域中
+        //把数据模型通过model封装
         model.addAttribute("users",users);
+        //给model指定展示的路径
         return "/table/dynamic_table";
     }
 
