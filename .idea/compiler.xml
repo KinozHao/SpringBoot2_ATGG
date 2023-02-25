@@ -9,9 +9,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="SpringBoot2" />
         <module name="A_HelloWord" />
+        <module name="F_DataSource" />
         <module name="HelloBoot" />
         <module name="C_Yaml" />
         <module name="D_WebSimpleFuc" />
+        <module name="G_WithMabatis" />
         <module name="B_Container" />
         <module name="E_AdminSys" />
       </profile>
@@ -27,6 +29,8 @@
       <module name="C_Yaml" options="-parameters" />
       <module name="D_WebSimpleFuc" options="-parameters" />
       <module name="E_AdminSys" options="-parameters" />
+      <module name="F_DataSource" options="-parameters" />
+      <module name="G_WithMabatis" options="-parameters" />
       <module name="HelloBoot" options="-parameters" />
       <module name="SpringBoot2" options="-parameters" />
     </option>

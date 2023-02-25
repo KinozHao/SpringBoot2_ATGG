@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+  <form th:action="@{/insertCar}" method="post">
+    <h1>
+      身份id:<input type="text" name="id"><br>
+      汽车品牌:<input type="text" name="brand"><br>
+      国家:<input type="text" name="country"><Br>
+      <input type="submit" value="提交">
+    </h1>
+  </form>
+</body>
+</html>

@@ -339,6 +339,9 @@
         <li>
           <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
             <img src="images/photos/user-avatar.png" alt="" />
+            <!--使用p标签写法 但是会出现ui布局问题-->
+            <!--<p th:text="${#httpSession.loginUser.username}"></p>-->
+            <!--行内写法-->
             [[${session.loginUser.username}]]
             <span class="caret"></span>
           </a>

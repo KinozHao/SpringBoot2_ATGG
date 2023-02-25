@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springboot?useUnicode=true&CharacterEncoding=utf-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false
+    username: 'root'
+    password: '123456'
+mybatis:
+  #单使用starter时,config-location也无需配置
+  config-location: classpath:mybatis/MbConfig.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+
+  #开启驼峰无法启动项目
+  #configuration:
+    #map-underscore-to-camel-case: true  #开启驼峰
