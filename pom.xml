@@ -1,24 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.8</version>
-        <relativePath/> <!-- lookup parent from repository -->
-    </parent>
 
+    <!--父模块信息-->
+    <modelVersion>4.0.0</modelVersion>
     <groupId>com.bootlearn</groupId>
     <artifactId>SpringBoot2</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>SpringBoot2</name>
-    <description>SpringBoot2</description>
+    <version>2.0.0</version>
+    <!--打包方式-->
+    <packaging>pom</packaging>
 
+    <!--模块聚合-->
+    <modules>
+        <module>A_HelloWord</module>
+        <module>A_Framework</module>
+        <module>B_Container</module>
+        <module>C_Yaml</module>
+        <module>D_WebSimpleFuc</module>
+        <module>E_AdminSys</module>
+        <module>F_DataSource</module>
+        <module>G_WithMybatis</module>
+    </modules>
+
+    <!--统一编码格式和jdk版本-->
     <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>11</java.version>
     </properties>
+
+    <!--使用依赖管理器进行版本控制-->
+    <dependencyManagement>
+        <dependencies>
+            <!-- SpringBootCore-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>2.7.8</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--mybatis-plus-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>3.5.3.1</version>
+            </dependency>
+            <!--swagger语法-->
+            <dependency>
+                <groupId>io.swagger</groupId>
+                <artifactId>swagger-annotations</artifactId>
+                <version>1.6.2</version>
+            </dependency>
+            <!--mysql driver-->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>5.1.47</version>
+            </dependency>
+            <!--druid databasePool-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>1.1.9</version>
+            </dependency>
+            <!--druid starter-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>1.1.17</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <configuration>
+                        <excludes>
+                            <exclude>
+                                <groupId>org.projectlombok</groupId>
+                                <artifactId>lombok</artifactId>
+                            </exclude>
+                        </excludes>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
 
 </project>
